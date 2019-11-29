@@ -98,7 +98,7 @@ Build_{{ project.name }}_Win_{{ win_api.name }}_Player_{{ editor.version }}:
 {% else %}
 
 {{ project.name }}_Win_{{ win_api.name }}_{{ testplatform.name }}_{{ editor.version }}:
-  name : Test {{ project.name }} on Win4_{{ win_api.name }}_{{ testplatform.name }} on version {{ editor.version }}
+  name : Test {{ project.name }} on Win_{{ win_api.name }}_{{ testplatform.name }} on version {{ editor.version }}
   agent:
     {% if testplatform.name == "editmode" %}
     type: Unity::VM
