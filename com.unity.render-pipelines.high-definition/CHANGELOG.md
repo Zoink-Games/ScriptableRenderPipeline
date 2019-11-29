@@ -221,6 +221,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Fix Wizard load when none selected for RenderPipelineAsset
 - Fixed rendering errors when enabling debug modes with custom passes
 - Fix an issue that made PCSS dependent on Atlas resolution (not shadow map res)
+- Fixed missing distortion inputs in Lit and Unlit material UI.
 
 ### Changed
 - Color buffer pyramid is not allocated anymore if neither refraction nor distortion are enabled
