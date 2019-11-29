@@ -221,6 +221,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Fix Wizard load when none selected for RenderPipelineAsset
 - Fixed rendering errors when enabling debug modes with custom passes
 - Fix an issue that made PCSS dependent on Atlas resolution (not shadow map res)
+- Fixing a bug whith histories when n>4 for ray traced shadows
+- Fixing wrong behavior in ray traced shadows for mesh renderers if their cast shadow is shadow only or double sided
+- Only tracing rays for shadow if the point is inside the code for spotlight shadows
+- Only tracing rays if the point is inside the range for point lights
+- Fixing ghosting issues when the screen space shadow  indexes change for a light with ray traced shadows
+- Fix an issue with stencil management and Xbox One build that caused corrupted output in deferred mode.
 - Fixed missing distortion inputs in Lit and Unlit material UI.
 
 ### Changed
