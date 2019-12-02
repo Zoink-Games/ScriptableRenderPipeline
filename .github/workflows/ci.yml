@@ -1,0 +1,14 @@
+name: Run tests on PR
+
+on:
+  pull_request:
+    types: [ready_for_review]
+    
+jobs:
+  build:
+    
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Run SRP ABV
+      run: .yamato/upm-ci-abv.yml#all_project_ci_nightly
