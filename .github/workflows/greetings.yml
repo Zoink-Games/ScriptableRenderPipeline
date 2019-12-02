@@ -12,4 +12,4 @@ jobs:
         pr-message: |
                  Welcome to the Unity SRP repo!
                  Please make sure to fill out the PR template as best you can to give reviewers as much information as possible.
-                 If you have any questions (and you are a Unity employee) go to #devs-renderpipe
+                 If you have any questions (and you are a Unity employee) go to "#devs-renderpipe"
