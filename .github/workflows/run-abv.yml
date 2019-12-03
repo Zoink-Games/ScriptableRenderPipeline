@@ -20,4 +20,4 @@ jobs:
     - run: pip install requests
       
     - name: Run SRP ABV
-      run: python .yamato/start-abv.py "${{ github.head_ref }}" "${{ github.sha }}" "${{ secrets.Yamato }}"
+      run: python .yamato/start-abv.py "${{ github.head_ref }}" "${{ github.sha }}" "${{ secrets.Yamato2 }}"
