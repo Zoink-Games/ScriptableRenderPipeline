@@ -1,8 +1,6 @@
 name: Run tests on PR
 
-on:
-  pull_request:
-    types: [ready_for_review]
+on: pull_request
     
 jobs:
   build:
