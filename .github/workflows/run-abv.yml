@@ -1,6 +1,8 @@
 name: Run tests on PR
 
-on: pull_request
+on:
+  pull_request:
+    types: [opened, ready_for_review]
     
 jobs:
   build:
@@ -19,6 +21,8 @@ jobs:
       with:
        python-version: '3.x' # Version range or exact version of a Python version to use, using semvers version range syntax.
        architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
+      
+    - run: pip install requests
       
     - name: Run SRP ABV
       run: python .yamato/start-abv.py "${{ github.head_ref }}" "${{ github.sha }}" "${{ secrets.Yamato }}"
