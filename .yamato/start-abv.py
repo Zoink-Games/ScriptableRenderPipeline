@@ -23,10 +23,10 @@ data = '''{
 response = requests.post(url, data=data, headers={'Authorization': key})
 
 if(response.ok):
-    print "ok"
+    print("ok")
 else:
     response.raise_for_status()
-    print "oh no"
+    print("oh no")
 
 #response_json = response.json()
 #job_id = response_json['id']
