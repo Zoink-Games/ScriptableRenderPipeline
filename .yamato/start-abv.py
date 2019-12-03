@@ -22,6 +22,10 @@ data = '''{
 response = requests.post(url, data=data, headers={'Authorization': key})
 
 response_json = response.json()
+job_id = response_json['id']
+get_job = requests.get(url + '/' + job_id, headers={'Authorization': key})
+job_json = get_job.json()
+status = job_json['status']
 
 if status == 'success':
   print('Success: Check job at https://yamato.prd.cds.internal.unity3d.com/job/'+job_id)
