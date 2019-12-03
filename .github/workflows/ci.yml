@@ -10,5 +10,18 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+    - uses: actions/checkout@master
+    
+    - name: Print Pull Request Branch name extracted from GitHub context
+      env:
+        BRNAME: ${{ github.head_ref }}
+      run: echo "Branch name = $BRNAME"
+    
+    - uses: actions/setup-python@v1
+      with:
+       python-version: '3.x' # Version range or exact version of a Python version to use, using semvers version range syntax.
+       architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
+      
+    #- run: python testscript.py "${{ github.head_ref }}"
     - name: Run SRP ABV
       run: .yamato/upm-ci-abv.yml#all_project_ci_nightly
