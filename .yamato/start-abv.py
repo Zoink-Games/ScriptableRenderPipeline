@@ -1,6 +1,8 @@
 import sys
 import requests
 
+url = "https://yamato-api.prd.cds.internal.unity3d.com/jobs"
+
 branch_name = sys.argv[1]
 git_revision = sys.argv[2]
 key = 'ApiKey ' + sys.argv[3]
