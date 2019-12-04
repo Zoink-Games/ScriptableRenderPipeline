@@ -1,11 +1,10 @@
 **DONT FORGET TO ADD A CHANGELOG**
 
 ### Checklist for PR maker
-- Have you added a Label? : HDRP, Universal, ShaderGraph etc...
-- Have you added a label for backport (if needed)? : need-backport-2019.3  .  When the PR is backported the label will be change ton backported-2019.3
-- Have you added a changelog? Each package have a changelog.
-- Have you updated or added the documentation for you PR? When property name is changed, when a feature behavior is change, when adding a new features, think to update the documentation in the same PR.
-- Have you added a graphic test for your PR (if needed)? When adding new feature or discovering a bug that isn't cover by a test, please add a graphic test
+- [ ] Have you added a label for backport (if needed)? : need-backport-2019.3  .  When the PR is backported the label will be change ton backported-2019.3
+- [ ] Have you updated the changelog? Each package has a changelog.
+- [ ] Have you updated or added the documentation for you PR? When property name is changed, when a feature behavior is change, when adding a new features, think to update the documentation in the same PR.
+- [ ] Have you added a graphic test for your PR (if needed)? When adding new feature or discovering a bug that isn't covered by a test, please add a graphic test
 
 ---
 ### Purpose of this PR
