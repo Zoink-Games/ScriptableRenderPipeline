@@ -265,6 +265,8 @@ All_{{ project.name }}_{{ editor.version }}:
       only:
         - "com.unity.render-pipelines.universal/**/*"
         - "TestProjects/Universal*/**/*"
+      except:
+        - "**/*.md"
   {% endif %}
   
 {% endfor %}
