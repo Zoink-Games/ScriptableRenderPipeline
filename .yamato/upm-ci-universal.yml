@@ -259,6 +259,13 @@ All_{{ project.name }}_{{ editor.version }}:
 
   {% endfor %}
   {% endfor %}
+  {% if editor.version == "fast-trunk" %}
+  triggers:
+    changes:
+      only:
+        - "com.unity.render-pipelines.universal/**/*"
+        - "TestProjects/Universal*/**/*"
+  {% endif %}
   
 {% endfor %}
 {% endfor %}
