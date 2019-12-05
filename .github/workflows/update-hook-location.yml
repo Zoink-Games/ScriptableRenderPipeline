@@ -1,9 +1,10 @@
 name: Update git hooks
-on: pull_request:
+on: create
 
 jobs:
   update-hook:
     runs-on: ubuntu-latest
     steps:
     - uses: srt32/git-actions@v0.0.3
-      args: "git config core.hooksPath scripts\git-hooks"
+      with:
+        args: "git config core.hooksPath scripts\\git-hooks"
