@@ -1,0 +1,6 @@
+name: Update git hooks
+on: pull_request:
+
+jobs:
+  update-hook:
+    runs-on: ubuntu-latest
