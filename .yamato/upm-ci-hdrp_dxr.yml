@@ -102,13 +102,6 @@ win_apis:
 
 All_{{ project.name }}:
   name: All {{ project.name }} CI
-  agent:
-    name: whatever
-    type: Unity::VM
-    image: cds-ops/ubuntu-18.04-agent:latest
-    flavor: b1.small
-  commands:
-    - dir
   dependencies:
   {% for platform in platforms %}
   {% for testplatform in testplatforms %}

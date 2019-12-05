@@ -33,12 +33,6 @@ testplatforms:
 {% for editor in editors %}
 all_project_ci_{{ editor.version }}:
   name: _ABV for SRP repository - {{ editor.version }}
-  agent:
-    type: Unity::VM
-    image: cds-ops/ubuntu-18.04-agent:latest
-    flavor: b1.small
-  commands:
-    - dir
   dependencies:
   {% for project in projects %}
     - path: .yamato/upm-ci-{{ project.name | downcase }}.yml#All_{{ project.name }}_{{ editor.version }}
@@ -62,12 +56,6 @@ all_project_ci_{{ editor.version }}:
 # a separate job so that only trunk is run nightly, not fast-trunk
 all_project_ci_nightly:
   name: _Nightly ABV against trunk
-  agent:
-    type: Unity::VM
-    image: cds-ops/ubuntu-18.04-agent:latest
-    flavor: b1.small
-  commands:
-    - dir
   dependencies:
   {% for project in projects %}
     - path: .yamato/upm-ci-{{ project.name | downcase }}.yml#All_{{ project.name }}_trunk
@@ -120,12 +108,6 @@ smoke_test_{{ testplatform.name }}_{{ editor.version }}:
 
 all_smoke_tests:
   name: All Smoke Tests
-  agent:
-    type: Unity::VM
-    image: cds-ops/ubuntu-18.04-agent:latest
-    flavor: b1.small
-  commands:
-    - dir
   dependencies:
   {% for testplatform in testplatforms %} 
   {% for editor in editors %}
