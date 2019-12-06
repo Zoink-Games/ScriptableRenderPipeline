@@ -13,7 +13,7 @@ namespace UnityEditor.Experimental.Rendering.HighDefinition
         SerializedDataParameter m_MaxSamples;
         SerializedDataParameter m_MinDepth;
         SerializedDataParameter m_MaxDepth;
-        SerializedDataParameter m_MaxIntensity;
+        SerializedDataParameter m_MaxExposure;
 
         public override void OnEnable()
         {
@@ -24,7 +24,7 @@ namespace UnityEditor.Experimental.Rendering.HighDefinition
             m_MaxSamples = Unpack(o.Find(x => x.maximumSamples));
             m_MinDepth = Unpack(o.Find(x => x.minimumDepth));
             m_MaxDepth = Unpack(o.Find(x => x.maximumDepth));
-            m_MaxIntensity = Unpack(o.Find(x => x.maximumIntensity));
+            m_MaxExposure = Unpack(o.Find(x => x.maximumExposure));
         }
 
         public override void OnInspectorGUI()
@@ -56,7 +56,7 @@ namespace UnityEditor.Experimental.Rendering.HighDefinition
                     PropertyField(m_MaxSamples);
                     PropertyField(m_MinDepth);
                     PropertyField(m_MaxDepth);
-                    PropertyField(m_MaxIntensity);
+                    PropertyField(m_MaxExposure);
                     EditorGUI.indentLevel--;
                 }
             }

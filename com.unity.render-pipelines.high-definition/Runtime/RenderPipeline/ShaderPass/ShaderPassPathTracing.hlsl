@@ -101,7 +101,7 @@ void ClosestHit(inout RayIntersection rayIntersection : SV_RayPayload, Attribute
     float3 pathThroughput = rayIntersection.color;
 
     // And reset the ray intersection color, which will store our final result
-    rayIntersection.color = computeDirect ? builtinData.emissiveColor * GetCurrentExposureMultiplier() : 0.0;
+    rayIntersection.color = computeDirect ? builtinData.emissiveColor: 0.0;
 
     // Initialize our material data
     MaterialData mtlData = CreateMaterialData(bsdfData, -WorldRayDirection());
@@ -142,7 +142,7 @@ void ClosestHit(inout RayIntersection rayIntersection : SV_RayPayload, Attribute
                 if (nextRayIntersection.t >= rayDescriptor.TMax)
                 {
                     float misWeight = PowerHeuristic(pdf, mtlResult.diffPdf + mtlResult.specPdf);
-                    rayIntersection.color += value * misWeight * GetCurrentExposureMultiplier();
+                    rayIntersection.color += value * misWeight;
                 }
             }
         }
@@ -194,7 +194,7 @@ void ClosestHit(inout RayIntersection rayIntersection : SV_RayPayload, Attribute
                 EvaluateLights(lightList, rayDescriptor, lightValue, lightPdf);
 
                 float misWeight = PowerHeuristic(pdf, lightPdf);
-                nextRayIntersection.color += lightValue * misWeight * GetCurrentExposureMultiplier();
+                nextRayIntersection.color += lightValue * misWeight;
             }
 
             rayIntersection.color += value * russianRouletteFactor * nextRayIntersection.color;
@@ -202,7 +202,7 @@ void ClosestHit(inout RayIntersection rayIntersection : SV_RayPayload, Attribute
     }
 
 #else // HAS_LIGHTLOOP
-    rayIntersection.color = (!currentDepth || computeDirect) ? builtinData.emissiveColor * GetCurrentExposureMultiplier() : 0.0;
+    rayIntersection.color = (!currentDepth || computeDirect) ? builtinData.emissiveColor: 0.0;
 #endif
 
     // Bias the result (making it too dark), but reduces fireflies a lot

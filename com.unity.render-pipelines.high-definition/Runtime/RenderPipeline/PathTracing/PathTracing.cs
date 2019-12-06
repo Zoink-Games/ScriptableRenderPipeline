@@ -21,8 +21,8 @@ namespace UnityEngine.Rendering.HighDefinition
         [Tooltip("Defines the maximum number of bounces for each path.")]
         public ClampedIntParameter maximumDepth = new ClampedIntParameter(3, 1, 10);
 
-        [Tooltip("Defines the maximum intensity value computed for a path.")]
-        public ClampedFloatParameter maximumIntensity = new ClampedFloatParameter(10f, 0f, 100f);
+        [Tooltip("Defines the maximum exposure value computed for a path.")]
+        public ClampedFloatParameter maximumExposure = new ClampedFloatParameter(1.0f, 0.0f, 32.0f);
     }
     public partial class HDRenderPipeline
     {
@@ -83,7 +83,7 @@ namespace UnityEngine.Rendering.HighDefinition
             cmd.SetGlobalFloat(HDShaderIDs._RaytracingNumSamples, pathTracingSettings.maximumSamples.value);
             cmd.SetGlobalFloat(HDShaderIDs._RaytracingMinRecursion, pathTracingSettings.minimumDepth.value);
             cmd.SetGlobalFloat(HDShaderIDs._RaytracingMaxRecursion, pathTracingSettings.maximumDepth.value);
-            cmd.SetGlobalFloat(HDShaderIDs._RaytracingIntensityClamp, pathTracingSettings.maximumIntensity.value);
+            cmd.SetGlobalFloat(HDShaderIDs._RaytracingIntensityClamp, Mathf.Exp(pathTracingSettings.maximumExposure.value));
             cmd.SetGlobalFloat(HDShaderIDs._RaytracingCameraNearPlane, hdCamera.camera.nearClipPlane);
 
             // Set the data for the ray generation

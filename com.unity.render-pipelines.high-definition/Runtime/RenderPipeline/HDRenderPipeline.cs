@@ -2007,7 +2007,11 @@ namespace UnityEngine.Rendering.HighDefinition
                     lightCluster.EvaluateClusterDebugView(cmd, hdCamera);
                 }
 
+                // Render the paths for this frame
                 RenderPathTracing(hdCamera, cmd, m_CameraColorBuffer, renderContext, m_FrameCount);
+
+                // Make sure the color pyramid is rendered
+                RenderColorPyramid(hdCamera, cmd, false);
             }
             else
             {
