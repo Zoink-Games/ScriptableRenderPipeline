@@ -229,6 +229,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Fix an issue with stencil management and Xbox One build that caused corrupted output in deferred mode.
 - Fixed a mismatch in behavior between the culling of shadow maps and ray traced point and spot light shadows
 - Fix recursive ray tracing not working anymore after intermediate buffer refactor.
+- Fix exposure now working properly with path tracing.
 
 ### Changed
 - Color buffer pyramid is not allocated anymore if neither refraction nor distortion are enabled
@@ -269,6 +270,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Change how method for specular occlusions is decided on inspector shader (Lit, LitTesselation, LayeredLit, LayeredLitTessellation)
 - Unlocked SSS, SSR, Motion Vectors and Distortion frame settings for reflections probes.
 - Changed the ownership of temporary ray tracing buffers to reduce the memory footprint.
+- Changed maximum intensity in the path tracing volume setting to maximum exposure.
 
 ## [7.1.1] - 2019-09-05
 
