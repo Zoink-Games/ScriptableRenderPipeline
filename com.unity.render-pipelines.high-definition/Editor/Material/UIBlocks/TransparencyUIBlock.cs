@@ -22,7 +22,7 @@ namespace UnityEditor.Rendering.HighDefinition
 
         public class Styles
         {
-            public const string header = "Refraction Inputs";
+            public const string header = "Transparency Inputs";
         }
 
         Expandable          m_ExpandableBit;
