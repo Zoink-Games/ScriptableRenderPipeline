@@ -2009,9 +2009,6 @@ namespace UnityEngine.Rendering.HighDefinition
 
                 // Render the paths for this frame
                 RenderPathTracing(hdCamera, cmd, m_CameraColorBuffer, renderContext, m_FrameCount);
-
-                // Make sure the color pyramid is rendered
-                RenderColorPyramid(hdCamera, cmd, false);
             }
             else
             {
