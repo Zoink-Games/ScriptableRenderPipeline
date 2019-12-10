@@ -10,7 +10,7 @@ Note: In **Universal Render Pipeline** this [Node](Node.md) returns the value of
 
 NOTE: This [Node](Node.md) can only be used in the **Fragment** [Shader Stage](Shader-Stage.md).
 
-#### Unity Pipelines Supported
+#### Unity Render Pipelines Support
 - Universal Render Pipeline
 - High Definition Render Pipeline
 
