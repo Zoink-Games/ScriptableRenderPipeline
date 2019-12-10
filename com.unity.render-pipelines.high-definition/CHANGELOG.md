@@ -232,6 +232,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Fix recursive ray tracing not working anymore after intermediate buffer refactor.
 - Fix ray traced shadow denoising not working (history rejected all the time).
 - Fixed shader warning on xbox one
+- Fix issue with volumetric data not being initialized if default settings have volumetric and reprojection off. 
 
 ### Changed
 - Color buffer pyramid is not allocated anymore if neither refraction nor distortion are enabled
