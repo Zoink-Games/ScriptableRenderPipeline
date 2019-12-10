@@ -4,4 +4,4 @@ Shader Graph is only compatible with the Scriptable Render Pipelines (SRPs), nam
 
 Shader Graph now comes included with the HDRP and URP packages. When you add either SRP to your project, Unity automatically loads Shader Graph.
 
-For more information about setting up either SRP, see [Getting started with HDRP](https://docs.unity3d.com/Packages/com.unity.render-pipelines.high-definition@latest/index.html?subfolder=/manual/Getting-started-with-HDRP.html) or [Getting started with URP](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@latest/index.html?subfolder=/manual/getting-started-with-lwrp.html).
+For more information about setting up either SRP, see [Getting started with HDRP](https://docs.unity3d.com/Packages/com.unity.render-pipelines.high-definition@latest/index.html?subfolder=/manual/Getting-started-with-HDRP.html) or [Getting started with URP](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@latest/index.html?subfolder=/manual/InstallingAndConfiguringURP.html).
