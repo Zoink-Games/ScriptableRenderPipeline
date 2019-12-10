@@ -4,8 +4,10 @@
 
 Provides access to parameters of the screen.
 
-#### Unity Pipelines Supported
+#### Unity Render Pipelines Support
 - Universal Render Pipeline
+
+The High Definition Render Pipeline does **not** support this Node.
 
 ## Ports
 
