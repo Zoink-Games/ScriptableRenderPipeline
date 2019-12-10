@@ -4,6 +4,9 @@
 
 Provides access to parameters of the screen.
 
+#### Unity Pipelines Supported
+- Universal Render Pipeline
+
 ## Ports
 
 | Name        | Direction           | Type  | Binding | Description |

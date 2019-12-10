@@ -4,6 +4,9 @@
 
 Provides access to various parameters of the **Camera** currently being used for rendering. This is comprised of values the **Camera**'s GameObject, such as Position and Direction, as well as various projection parameters.
 
+#### Unity Pipelines Supported
+- Universal Render Pipeline
+
 ## Ports
 
 | Name        | Direction           | Type  | Binding | Description |
