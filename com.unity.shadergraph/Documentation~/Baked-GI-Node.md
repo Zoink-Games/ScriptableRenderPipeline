@@ -10,7 +10,7 @@ Different Render Pipelines may produce different results. If you're building a s
 
 #### Unity Pipelines Supported
 - HD Render Pipeline
-- Lightweight Render Pipeline
+- Universal Render Pipeline
 
 ## Ports
 
