@@ -261,6 +261,7 @@ All_{{ project.name }}_{{ editor.version }}:
       only:
         - "com.unity.shadergraph/**/*"
         - "TestProjects/ShaderGraph*/**/*"
+        - "com.unity.render-pipelines.universal/Editor/ShaderGraph/*"
       except:
         - "**/*.md"
   {% endif %}

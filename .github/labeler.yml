@@ -18,6 +18,7 @@ Universal:
 Shader Graph:
   - com.unity.shadergraph/**/*
   - TestProjects/ShaderGraph*/**/*
+  - com.unity.render-pipelines.universal/Editor/ShaderGraph/*
   
 vfx:
   - com.unity.visualeffectgraph/**/*
