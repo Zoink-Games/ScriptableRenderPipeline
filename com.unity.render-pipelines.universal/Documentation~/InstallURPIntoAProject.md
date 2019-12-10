@@ -1,11 +1,11 @@
 # Install into a Project
 
-You can download and install the latest version of Universal Render Pipeline (URP) to your existing Project via the [Package Manager system](https://docs.unity3d.com/Packages/com.unity.package-manager-ui@latest/index.html), and then install it into your Project. If you don’t have an existing Project, see documentation on [how to start a new URP Project from a template](CreateNewProjectFromTemplate.md).
+You can download and install the latest version of the Universal Render Pipeline (URP) to your existing Project via the [Package Manager system](https://docs.unity3d.com/Packages/com.unity.package-manager-ui@latest/index.html), and then install it into your Project. If you don’t have an existing Project, see documentation on [how to start a new URP Project from a template](CreateNewProjectFromTemplate.md).
 
 To install URP into an existing Project:
 
 1. In Unity, open your Project. In the top navigation bar, select __Window > Package Manager__ to open the __Package Manager__ window. Select the __All__ tab. This tab displays the list of available packages for the version of Unity that you are currently running.
-2. Select **Universal RP** from the list of packages. In the top right corner of the window, select __Install__. This installs URP directly into your Project.
+2. Select **Universal Render Pipeline** from the list of packages. In the top right corner of the window, select __Install__. This installs URP directly into your Project.
 
 ## Configure URP 
 

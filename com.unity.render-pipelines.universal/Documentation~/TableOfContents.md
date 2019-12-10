@@ -42,7 +42,7 @@
   * [Upgrading shaders from Built-in](upgrading-your-shaders.md)
   * [Shader stripping](shader-stripping.md)
 
-* [2D in Universal RP](2d-index.md)
+* [2D](2d-index.md)
   * [Introduction to Lights 2D](Lights-2D-intro.md)
   * [Requirements and setup](Setup.md)
   * [Preparing and upgrading](PrepShader.md)
