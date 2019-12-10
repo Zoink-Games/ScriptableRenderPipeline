@@ -295,6 +295,9 @@ namespace UnityEngine.Rendering.HighDefinition
 
         internal void InitializeVolumetricLightingHistoryPerCamera(HDCamera hdCamera, int bufferCount)
         {
+            if (!hdCamera.frameSettings.IsEnabled(FrameSettingsField.Volumetrics))
+                return;
+
             hdCamera.volumetricHistoryIsValid = false;
 
             RTHandle HistoryBufferAllocatorFunction(string viewName, int frameIndex, RTHandleSystem rtHandleSystem)
